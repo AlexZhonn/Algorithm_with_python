@@ -1,0 +1,18 @@
+# Find the smallest one in the array
+def findSmallest(arr):
+    findSmallest = arr[0]
+    smallest_index = 0
+    for i in range(1 , len(arr)):
+        if findSmallest < arr[i]:
+            findSmallest = arr[i]
+            smallest_index = i
+    return smallest_index
+
+# get the smallest one and put it in the array
+def selection_sort(arr):
+    newArr = []
+    copiedarr = list[arr]
+    for i in range(len(copiedarr)):
+        smallest = findSmallest(arr)
+        newArr.append(copiedarr.pop[smallest])
+    return newArr
